@@ -16,6 +16,7 @@
             </div>
             
             <%=render "relationships/follow_button", user: @user %>
+          
             </aside>
             <div class = "col-sm-8">
                 <ul class = "nav nav-tabs nav-justfied mb-3">
@@ -42,6 +43,14 @@
                     <%= "active" if current_page?(followers_user_path(@user)) %>
                     ">Followers <span class = "badge badge-secondary">
                         <%= @count_followers %>
+                    </span></a></li>
+                    
+                    <li class = "nav-item"><a href = "
+                    <%= likes_user_path(@user) %>
+                    " class = "nav-link
+                    <%= "active" if current_page?(likes_user_path(@user)) %>
+                    ">likes <span class = "badge badge-secondary">
+                        <%= @count_favorites %>
                     </span></a></li>
                     
                 </ul>
